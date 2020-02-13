@@ -1,0 +1,3 @@
+- Learns new technologies *easily*
+- **HTML**
+- **_Effective_** communicator
