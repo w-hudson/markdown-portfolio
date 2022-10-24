@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>OAuth2 Microsoft Graph Credentials</h1>
+        <p>Microsoft Modern Authentication uses the <b>OAuth2</b> protocol and security tokens that administrators can use to approve or revoke access to resources. The Modern Authentication method eliminates some of the risks associated with the exchange of a username and password every time a user needs to authenticate.</p>
+        <p>SecureX Orchestration allows users to generate OAuth2 tokens to authenticate with Azure AD and Microsoft Outlook 365.</p>
+        <p> Use <strong>OAuth2 Microsoft Graph Credentials</strong> account keys with <a href="activities-email.html">Email</a> workflow activities, <a href="events-email.html">Email Events</a>, and <a href="targets-microsoft-graph-endpoint.html">Microsoft Graph Endpoint</a> targets.</p>
+        <h2>Registering an Application and Obtaining OAuth2 Information in Azure AD</h2>
+        <p>To successfully create an account key based on OAuth2 Microsoft Graph Credentials, you must have an application and service principal that can be used with role-based access control in Azure AD. In many organizations, app creation and configuration is handled by an administrator. Orchestration requires an application that can run in a single organization. Perform the steps in the <a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal">Azure Active Directory documentation</a> from Microsoft. Ensure that you open<span class="bold"> API Permissions</span> and configure the following permissions for the app: <span class="bold">Mail.Read</span>,<span class="bold"> Mail.ReadWrite</span>,<span class="bold"> Mail.send</span>,<span class="bold"> User.Read</span>. The <span class="bold">Tenant ID</span> and <span class="bold">Client ID</span> are located on the <span class="bold">Overview </span>page for the App. You can obtain or generate a<span class="bold"> Secret Key </span>on the <span class="bold">Certificates and Secrets</span> page of the Azure app. </p>
+        <h2 id="usage">Creating OAuth2 Microsoft Graph Credentials Account Keys</h2>
+        <p>Complete the following steps to create a new OAuth2 Microsoft Graph Credentials account key:</p>
+        <p class="Note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #000000;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;b /&gt;&lt;/b&gt;">These steps assume that a user or application already exists in Azure Active Directory. You will need to enter information from Azure AD into the account key and copy information from the account key into the Azure application. If you do not have access to make changes to Azure AD, ensure that you contact your Azure AD administrator for assistance.<br /></p>
+        <ol style="list-style-type: decimal;">
+            <li>
+                <p>In the left navigation menu, click <strong>Account Keys</strong>.</p>
+            </li>
+            <li>
+                <p>Click <strong>New Account Key</strong>.</p>
+            </li>
+            <li>
+                <p>From the <strong>Account Key Type</strong> drop-down list, choose <span class="bold">OAuth2 Microsoft Graph Credentials</span>.<br /><br /><img src="Resources/Images/account-key-oauth2-key-type.png" /></p>
+            </li>
+            <li>
+                <p>Enter a unique display name for the account key in the <strong>Display Name</strong> field and a brief description in the <strong>Description</strong> field.<br /><br /><img src="Resources/Images/account-key-oath2-general.png" /><br /></p>
+            </li>
+            <li>
+                <p>Copy the <span class="bold">Redirect URI</span> and enter it in the Azure app details on the <span class="bold">Overview</span> page of the Azure app.<br /><br /><img src="Resources/Images/account-key-oath2-microsoft-graph-tooltips.png" /><br /></p>
+            </li>
+            <li>
+                <p>In the <span class="bold">Authorization Details</span> area, enter the following information from the <span class="bold">Overview </span>page of the application in Azure AD. If you do not have the necessary information, obtain it from Azure AD or contact your Azure administrator.<br /></p>
+                <ul>
+                    <li>
+                        <p><span class="bold">Directory (tenant) ID</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p><span class="bold">Application (client) ID</span>.</p>
+                    </li>
+                    <li>
+                        <p><b>Secret Key</b>
+                        </p>
+                    </li>
+                </ul>
+                <p>See the <a href="#Register">Registering an Application and Obtaining OAuth2 Information</a> section of this document for assistance locating your <span class="bold">Tenant ID</span>, <span class="bold">Client ID</span>, and <span class="bold">Secret Key</span>.<br /></p>
+            </li>
+            <li>
+                <p>Click <span class="bold">Authorize</span>.</p>
+            </li>
+            <li>
+                <p>A Microsoft account dialog will open. Click the account to associate with the account key.<br /><br /><img src="Resources/Images/account-keys-oauth2-microsoft-dialog.png" /><br /><br /></p>
+            </li>
+            <li>
+                <p>Enter the password for the account and click<span class="bold"> Sign in</span>.</p>
+            </li>
+            <li>
+                <p>Verify that you accept the permissions requested and click <span class="bold">Accept</span></p>
+            </li>
+        </ol>
+        <p>The new account key will be displayed at the top of the account keys list.</p>
+        <p>&#160;</p>
+    </body>
+</html>

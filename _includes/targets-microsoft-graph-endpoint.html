@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Microsoft Graph Endpoint Target</h1>
+        <p>Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security.</p>
+        <p>Orchestration uses Microsoft Graph Endpoint targets to monitor Outlook 365 inboxes via <a href="events-email.html">Email Events</a> and send emails via <a href="activities-email-send-email.html">Send Email</a> workflow activities.</p>
+        <p><strong>Microsoft Graph Endpoint</strong> targets require <span class="bold"><a href="account-keys-oauth-microsoft-graph.html">OAuth2 Microsoft Graph Credentials</a></span> account keys and are used with <MadCap:xref href="activities-email.html">Email</MadCap:xref> workflow activities and <MadCap:xref href="events-email.html">Email Events</MadCap:xref>.</p>
+        <h2>Creating Microsoft Graph Endpoint Targets</h2>
+        <p>Perform the following steps to create Microsoft Graph Endpoint Targets:</p>
+        <p><b>Note</b>: These steps assume that a user or application already exists in Azure Active Directory. If you do not have an app configured in Azure AD, you may need to contact your Azure AD administrator for assistance.</p>
+        <ol style="list-style-type: decimal;">
+            <li>
+                <p>In the left navigation menu, click <strong>Targets</strong>.</p>
+            </li>
+            <li>
+                <p>Click <strong>New Target</strong>.</p>
+            </li>
+            <li>
+                <p>From the <strong>Target Type</strong> drop-down list, choose Microsoft Graph Endpoint.</p>
+            </li>
+            <li>
+                <p>Enter a unique display name for the target in the <strong>Display Name</strong> field and a brief description in the <strong>Description</strong> field.<br /><br /><img src="Resources/Images/microsoft-graph-endpoint-target-general.png" /><br /></p>
+            </li>
+            <li>
+                <p>In the <strong>Account Keys</strong> area, click the <strong>Default Account Keys</strong> drop-down list and choose an existing account key or choose <strong>Add New</strong> to create a new account key. For more information on creating an OAuth2 Microsoft Graph account key, see the <a href="account-keys-oauth-microsoft-graph.html">Oauth2 Microsoft Graph Credentials</a> Help topic.</p>
+            </li>
+            <li>
+                <p>Click <span class="bold">Submit</span>.</p>
+            </li>
+        </ol>
+        <p>The new target will be the first in the list on the Targets page.</p>
+    </body>
+</html>
